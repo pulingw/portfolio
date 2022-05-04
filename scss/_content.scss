@@ -1,0 +1,85 @@
+/* ------------------------------------
+           CONTENT - TOPPAGE
+--------------------------------------*/ 
+.wrap {
+	.title {
+        color: $bgColor;
+        margin-bottom: 1em;
+        img {
+            height: 34px;
+        }
+        @media screen and (max-width: 1600px) {
+            img {
+                height: 22px;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            img {
+                height: 26px;
+            }
+        }
+	}
+	
+}
+
+
+#About {
+    .text {
+        hr {
+            border-left: 0;
+            border-top: 0;
+            border-bottom: 3px solid $bgColor;
+            width: 2em;
+            margin: 2em 0;
+        }
+    }
+    @media screen and (max-width: 1600px) {
+    }
+    @media screen and (max-width: 768px) {
+    }
+    @media screen and (max-width: 414px) {
+    }
+}
+
+#Work {
+    background: $bgColor;
+    .title {
+        color: $baseColor;
+    }
+    article {
+        width: 100%;
+        margin: 5% 0;
+        figure {
+            margin: 0;
+            width: 75%;
+        }
+        a {
+            display: flex;
+            align-items: center;
+            gap: 2%;
+            img {
+                @include transition(all .5s ease);
+            }
+            .info {
+                margin: 0;
+            }
+            &:hover {
+                img {
+                    opacity: 0.7;
+                }
+            }
+        }
+        &:nth-child(even) {
+            a {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+    
+    @media screen and (max-width: 1600px) {
+    }
+    @media screen and (max-width: 768px) {
+    }
+    @media screen and (max-width: 414px) {
+    }
+}

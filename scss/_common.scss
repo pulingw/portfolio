@@ -1,0 +1,213 @@
+/* ------------------------------------
+               COMMON
+--------------------------------------*/
+@charset "utf-8";
+ html, body {
+     background: #fff;
+     width: 100%;
+     font-family: $baseFont;
+     font-size: $baseFontSize;
+     font-weight: 400;
+     color: $baseColor;
+     margin: 0;
+     padding: 0;
+     line-height: $baseLineHeight;
+     font-feature-settings: "palt";
+     letter-spacing: 1px;
+     overflow-x: hidden;
+}
+body {
+	&.overflow {
+		overflow: hidden;
+	}
+}
+*, *:before, *:after {box-sizing: border-box;}
+
+::selection {
+	background: $baseColor;
+    color: #fff;
+}
+
+img {
+	vertical-align: bottom;
+	max-width: 100%;
+	display: block;
+}
+.wrap section {padding: 7rem 0;}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;
+	margin-bottom: 0.8em;
+}
+h1 {
+	font-family: $headingFont;
+	font-size: 80px;
+	font-weight: 500;
+}
+h2 {
+	font-family: $headingFont;
+	font-size: 40px;
+	font-weight: 500;
+}
+h3 {
+    font-size: 18px;
+	font-weight: 400;
+}
+p {
+	font-size: 14px;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+	@include transition(all .3s ease);
+	&:hover {
+		color: $primaryColor;
+	}
+}
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+img {
+    display: block;
+    vertical-align: bottom;
+    max-width: 100%;
+}
+
+.animated{-webkit-animation-duration:.8s;animation-duration:.8s;}
+
+/* テキスト関係各種 */
+.center {text-align: center;}
+.left {text-align: left;}
+.right {text-align: right;}
+
+/* container各種 */
+.container {
+	width: 1000px;
+	max-width: 100%;
+	margin: auto;
+	padding: 0;
+    &.container-lg {
+        width: 1200px;
+    }
+}
+
+
+/* display各種 */
+.flex {display: flex;}
+.flex.flex-end {align-items: flex-end;}
+.flex.ai-center {align-items: center;}
+.flex.jc-center {justify-content: center;}
+.flex.jc-end {justify-content: flex-end;}
+.flex.jc-start {justify-content: flex-start;}
+.flex.jc-between {justify-content: space-between;}
+.flex.row-reverse {flex-direction: row-reverse;}
+.flex.column {flex-direction: column;}
+.flex.wrap {flex-wrap: wrap;}
+.flex .f-box {
+    width: 100%;
+    flex-grow: 1;
+}
+.margin-auto {margin: auto;}
+
+/* 幅設定 */
+
+
+/* ボタン基本設定 */
+.btn {
+	width: 290px;
+	max-width: 100%;
+	box-sizing: border-box;
+	text-align: center;
+	font-size: 24px;
+	font-weight: 300;
+	letter-spacing: 2px;
+	line-height: 1.8;
+    border-radius: 25px;
+    background-color: $baseColor;
+    color: #fff;
+	&.btn_block {
+		display: block;
+	}
+	&.btn_inline {
+		display: inline-block;
+	}
+	&.btn_border {
+		color: $primaryColor;
+		border: 1px solid $primaryColor;
+	}
+	&.btn_primary {
+		background-color: $primaryColor;
+	}
+    &.btn_link {
+        padding-right: 2em;
+        position: relative;
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            background: #fff;
+            height: 1px;
+        }
+        &:before {
+            width: 2em;
+            top: 52%;
+            right: 1em;
+        }
+        &:after {
+            width: 0.35em;
+            transform: rotate(35deg);
+            top: 46%;
+            right: 0.9em;
+        }
+    }
+}
+
+@media screen and (max-width: 1600px) {
+	body, html {
+        font-size: 11px;
+        letter-spacing: 0;
+    }
+	.container {width: 600px;}
+    .wrap section {padding: 4rem 0;}
+    h1 {font-size: 130px;}
+	h2 {font-size: 61px;}
+	h3 {font-size: 22px;}
+	h4 {font-size: 32px;}
+	h5 {font-size: 12px;}
+	p {font-size: 1em;}
+	.btn {
+        width: 175px;
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+}
+@media screen and (max-width: 1024px) {
+	body, html {font-size: 15px;}
+	.wrap section {padding: 3em 0;}
+}
+@media screen and (max-width: 768px) {
+	.btn {width: 230px;}
+}
+@media screen and (max-width: 414px) {
+	body, html {font-size: 3.2vw; letter-spacing: 0;}
+	.wrap section {padding: 10vw 0;}
+	.container {width: 100%; padding: 0 8.5vw;}
+    h1 {font-size: 34.66667vw;}
+	h2 {font-size: 18.93334vw;}
+	h3 {font-size: 4.26667vw;}
+	h4 {font-size: 6.4vw;}
+    h5 {font-size: 2.6vw;}
+	p {font-size: 3.46667vw;}
+	.btn {width: 48vw; font-size: 4vw; margin-bottom: 2vw;}
+}
+
+
+/* PC-SP display */
+.pc {display: none;}
+.sp {display: block;}
+
+@media screen and (min-width: 769px) {
+	.pc {display: block;}
+	.sp {display: none;}
+}
