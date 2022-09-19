@@ -38,7 +38,6 @@ body.overflow {
 }
 
 img {
-  vertical-align: bottom;
   max-width: 100%;
   display: block;
 }
@@ -92,7 +91,6 @@ ul {
 
 img {
   display: block;
-  vertical-align: bottom;
   max-width: 100%;
 }
 
@@ -257,6 +255,15 @@ img {
           transform: rotate(35deg);
   top: 46%;
   right: 0.9em;
+}
+
+hr {
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 3px solid #84aab2;
+  width: 2em;
+  margin: 2em 0;
 }
 
 @media screen and (max-width: 1600px) {
@@ -875,11 +882,7 @@ nav ul.main li a:hover {
 }
 
 #About .text hr {
-  border-left: 0;
-  border-top: 0;
-  border-bottom: 3px solid #e2ebed;
-  width: 2em;
-  margin: 2em 0;
+  border-bottom-color: #e2ebed;
 }
 
 #Work {

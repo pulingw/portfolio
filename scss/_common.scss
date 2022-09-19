@@ -29,7 +29,6 @@ body {
 }
 
 img {
-	vertical-align: bottom;
 	max-width: 100%;
 	display: block;
 }
@@ -71,7 +70,6 @@ ul {
 }
 img {
     display: block;
-    vertical-align: bottom;
     max-width: 100%;
 }
 
@@ -161,6 +159,15 @@ img {
             right: 0.9em;
         }
     }
+}
+
+hr {
+    border-left: 0;
+    border-top: 0;
+	border-right: 0;
+    border-bottom: 3px solid $primaryColor;
+    width: 2em;
+    margin: 2em 0;
 }
 
 @media screen and (max-width: 1600px) {

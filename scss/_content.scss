@@ -26,11 +26,7 @@
 #About {
     .text {
         hr {
-            border-left: 0;
-            border-top: 0;
-            border-bottom: 3px solid $bgColor;
-            width: 2em;
-            margin: 2em 0;
+            border-bottom-color: $bgColor;
         }
     }
     @media screen and (max-width: 1600px) {
