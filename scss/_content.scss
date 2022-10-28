@@ -34,6 +34,18 @@
     @media screen and (max-width: 768px) {
     }
     @media screen and (max-width: 414px) {
+        .flex {
+            flex-wrap: wrap;
+            row-gap: 10vw;
+            .f-box {
+                &:nth-of-type(1), &:nth-of-type(2) {
+                    width: 50%;
+                }
+                &:nth-of-type(3) {
+                    width: 100%;
+                }
+            }
+        } 
     }
 }
 

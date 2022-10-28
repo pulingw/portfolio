@@ -1,62 +1,4 @@
 /* ------------------------------------
-                LOADING
---------------------------------------*/ 
-.progress {
-    position: fixed;
-    right: 0px;
-    top: 0px;
-    width: 100vw;
-    height: 100vh;
-    z-index: 9999;
-}
-.bar { 
-    background-color: $primaryColor;
-    width: 0%;
-    height: 10px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-.probg {
-    position: fixed;
-    right: 0px;
-    top: 0px;
-    width: 100vw;
-    height: 100vh;
-    z-index: 9998;
-    background-color: #fff;
-}
-.logo {
-    position: fixed;
-    color: $primaryColor;
-    z-index: 9999;
-    top: 44.1%;
-    width: 900px;
-    left: 50%;
-    transform: translateX(-50%);
-    h2 {
-        letter-spacing: 5px;
-        text-align: right;
-    }
-	@media screen and (max-width: 1600px) {
-        width: 600px; top:35.3%;
-	}
-	@media screen and (max-width: 1300px) {
-        top:44.3%;
-	}
-	@media screen and (max-width: 1024px) {
-        width: 660px; top: 20.6%;
-	}
-	@media screen and (max-width: 820px) {
-        width: 660px; top: 23.9%;
-	}
-	@media screen and (max-width: 768px) {
-        width: 100%; padding: 0 15px; top: 48.3%;
-        h2 {letter-spacing: 2px;}
-	}
-}
-
-/* ------------------------------------
                   FV
 --------------------------------------*/ 
 #Top {
@@ -95,7 +37,19 @@
         padding: 9vw 0 9vw;
 	}
 	@media screen and (max-width: 414px) {
-        padding: 9vw 0 14vw;
+        padding: 24vw 0 20vw;
+        h1 {
+            line-height: 1.6;
+            letter-spacing: 2vw;
+            padding-bottom: 10vw;
+            &:after {
+                height: 2px;
+                width: 80%;
+            }
+        }
+        h2 {
+            letter-spacing: 2px;
+        }
     }
 }
 
